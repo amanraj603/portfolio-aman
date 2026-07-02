@@ -180,9 +180,11 @@ export default function Hero() {
               <strong style={{ color: "var(--text-primary)" }}>
                 Droom Technology
               </strong>
-              , building fast, scalable web experiences with Next.js, React, and
-              modern frontend technologies. Passionate about crafting
-              exceptional user journeys.
+              , building production-grade web applications with modern
+              JavaScript technologies, focusing on performance, scalability, and
+              exceptional user experience. Experienced in developing responsive
+              frontend interfaces, secure backend APIs, and end-to-end MERN
+              applications that solve real business problems.
             </p>
 
             <div

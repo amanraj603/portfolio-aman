@@ -151,8 +151,11 @@ export default function About() {
               <span>◈</span> About Me
             </div>
             <h2 className="section-title">
-              Crafting digital experiences with{" "}
-              <span className="gradient-text">purpose & precision</span>
+              Transforming ideas into scalable,
+              <span className="gradient-text">
+                {" "}
+                user-centric web applications.
+              </span>
             </h2>
             <div className="section-divider" />
 
@@ -163,14 +166,14 @@ export default function About() {
                 marginBottom: 20,
               }}
             >
-              I'm Associate Software Engineer at{" "}
+              I&apos;m a Full Stack Software Engineer with{" "}
               <strong style={{ color: "var(--text-primary)" }}>
-                Droom Technology
+                1.5+ years{" "}
               </strong>{" "}
-              in Gurugram, where I architect scalable component libraries and
-              user-facing features that serve{" "}
+              of work experience building scalable web applications using{" "}
               <strong style={{ color: "var(--text-primary)" }}>
-                10,000+ daily active users
+                React.js, Next.js, Node.js, Express.js, MongoDB, JavaScript,
+                TypeScript, GraphQL, and REST APIs.
               </strong>
               .
             </p>
@@ -181,11 +184,24 @@ export default function About() {
                 marginBottom: 32,
               }}
             >
-              I specialize in building high-performance web applications using{" "}
-              <strong style={{ color: "var(--accent-light)" }}>Next.js</strong>,{" "}
-              <strong style={{ color: "var(--accent-light)" }}>React</strong>,
-              and modern frontend tooling. I'm passionate about Core Web Vitals,
-              clean architecture, and crafting UI that genuinely delights users.
+              I enjoy solving complex engineering problems by creating clean
+              architectures, reusable components, and high-performance
+              applications. My experience spans frontend development, backend
+              API design, database integration, authentication, and performance
+              optimization.
+            </p>
+            <p
+              style={{
+                color: "var(--text-secondary)",
+                lineHeight: 1.85,
+                marginBottom: 32,
+              }}
+            >
+              I&apos;m currently seeking opportunities as a Full Stack
+              Developer, MERN Stack Developer, React Developer, Frontend
+              Developer, or Node.js Developer, where I can contribute to
+              impactful products while continuing to grow as a software
+              engineer.
             </p>
 
             <div

@@ -55,34 +55,60 @@ export default function Skills() {
             // Animate progress bars
             e.target.querySelectorAll(".skill-bar-fill").forEach((bar) => {
               const target = bar.getAttribute("data-level");
-              setTimeout(() => { bar.style.width = target + "%"; }, 200);
+              setTimeout(() => {
+                bar.style.width = target + "%";
+              }, 200);
             });
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
-    ref.current?.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    ref.current
+      ?.querySelectorAll(".reveal")
+      .forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
   return (
     <section id="skills" ref={ref}>
-      <div className="glow-orb" style={{ width: 500, height: 500, background: "radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%)", top: "0", left: "-150px" }} />
+      <div
+        className="glow-orb"
+        style={{
+          width: 500,
+          height: 500,
+          background:
+            "radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%)",
+          top: "0",
+          left: "-150px",
+        }}
+      />
 
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
-        <div className="reveal" style={{ textAlign: "center", marginBottom: 60 }}>
+        <div
+          className="reveal"
+          style={{ textAlign: "center", marginBottom: 60 }}
+        >
           <div className="section-label" style={{ justifyContent: "center" }}>
             <span>◈</span> Skills & Expertise
           </div>
-          <h2 className="section-title">Tech I work with</h2>
+          <h2 className="section-title">
+            Technologies & Tools I Use to Build Production Applications
+          </h2>
           <div className="section-divider" style={{ margin: "16px auto 0" }} />
           <p className="section-subtitle" style={{ margin: "20px auto 0" }}>
-            A curated stack refined through building production applications at scale.
+            A curated stack refined through building production applications at
+            scale.
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 24 }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+            gap: 24,
+          }}
+        >
           {Object.entries(SKILLS).map(([category, skills], ci) => {
             const rgb = COLORS[category];
             return (
@@ -91,36 +117,94 @@ export default function Skills() {
                 className="card reveal"
                 style={{ transitionDelay: `${ci * 0.1}s` }}
               >
-                <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
-                  <div style={{
-                    width: 36, height: 36, borderRadius: 10,
-                    background: `rgba(${rgb}, 0.15)`,
-                    border: `1px solid rgba(${rgb}, 0.3)`,
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    fontSize: 16,
-                  }}>
-                    {category === "Languages" ? "{ }" : category === "Frontend" ? "⟨⟩" : category === "Backend & APIs" ? "⚙" : category === "Database" ? "◉" : "🛠"}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 12,
+                    marginBottom: 24,
+                  }}
+                >
+                  <div
+                    style={{
+                      width: 36,
+                      height: 36,
+                      borderRadius: 10,
+                      background: `rgba(${rgb}, 0.15)`,
+                      border: `1px solid rgba(${rgb}, 0.3)`,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: 16,
+                    }}
+                  >
+                    {category === "Languages"
+                      ? "{ }"
+                      : category === "Frontend"
+                        ? "⟨⟩"
+                        : category === "Backend & APIs"
+                          ? "⚙"
+                          : category === "Database"
+                            ? "◉"
+                            : "🛠"}
                   </div>
-                  <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: `rgb(${rgb})` }}>{category}</h3>
+                  <h3
+                    style={{
+                      fontSize: "0.95rem",
+                      fontWeight: 700,
+                      color: `rgb(${rgb})`,
+                    }}
+                  >
+                    {category}
+                  </h3>
                 </div>
 
-                <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                <div
+                  style={{ display: "flex", flexDirection: "column", gap: 14 }}
+                >
                   {skills.map((skill) => (
                     <div key={skill.name}>
-                      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, alignItems: "center" }}>
-                        <span style={{ fontSize: 13, fontWeight: 500, color: "var(--text-secondary)" }}>{skill.name}</span>
-                        <span style={{ fontSize: 12, fontWeight: 700, color: `rgb(${rgb})` }}>{skill.level}%</span>
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          marginBottom: 6,
+                          alignItems: "center",
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontSize: 13,
+                            fontWeight: 500,
+                            color: "var(--text-secondary)",
+                          }}
+                        >
+                          {skill.name}
+                        </span>
+                        <span
+                          style={{
+                            fontSize: 12,
+                            fontWeight: 700,
+                            color: `rgb(${rgb})`,
+                          }}
+                        >
+                          {skill.level}%
+                        </span>
                       </div>
-                      <div style={{
-                        height: 4, borderRadius: 2,
-                        background: "rgba(255,255,255,0.06)",
-                        overflow: "hidden",
-                      }}>
+                      <div
+                        style={{
+                          height: 4,
+                          borderRadius: 2,
+                          background: "rgba(255,255,255,0.06)",
+                          overflow: "hidden",
+                        }}
+                      >
                         <div
                           className="skill-bar-fill"
                           data-level={skill.level}
                           style={{
-                            height: "100%", width: "0%",
+                            height: "100%",
+                            width: "0%",
                             borderRadius: 2,
                             background: `linear-gradient(90deg, rgba(${rgb},0.7), rgb(${rgb}))`,
                             transition: "width 1.2s cubic-bezier(0.4,0,0.2,1)",
@@ -138,10 +222,41 @@ export default function Skills() {
 
         {/* Skill chips */}
         <div className="reveal" style={{ marginTop: 48, textAlign: "center" }}>
-          <p style={{ color: "var(--text-muted)", fontSize: 13, marginBottom: 20, letterSpacing: "0.08em", textTransform: "uppercase", fontWeight: 600 }}>Also familiar with</p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center" }}>
-            {["SSR/SSG", "Context API", "Code Splitting", "Lazy Loading", "Memoization", "Core Web Vitals", "Responsive Design", "Figma", "JSON-driven UI", "Multi-step Forms"].map((chip) => (
-              <span key={chip} className="skill-badge">{chip}</span>
+          <p
+            style={{
+              color: "var(--text-muted)",
+              fontSize: 13,
+              marginBottom: 20,
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+              fontWeight: 600,
+            }}
+          >
+            Also familiar with
+          </p>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 10,
+              justifyContent: "center",
+            }}
+          >
+            {[
+              "SSR/SSG",
+              "Context API",
+              "Code Splitting",
+              "Lazy Loading",
+              "Memoization",
+              "Core Web Vitals",
+              "Responsive Design",
+              "Figma",
+              "JSON-driven UI",
+              "Multi-step Forms",
+            ].map((chip) => (
+              <span key={chip} className="skill-badge">
+                {chip}
+              </span>
             ))}
           </div>
         </div>
