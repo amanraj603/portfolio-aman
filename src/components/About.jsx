@@ -80,21 +80,21 @@ export default function About() {
                     <span style={{ color: "#34d399" }}>role</span>
                     <span style={{ color: "#f8fafc" }}>: </span>
                     <span style={{ color: "#fbbf24" }}>
-                      "Frontend Engineer"
+                      "Associate Software Engineer"
                     </span>
                     <span style={{ color: "#f8fafc" }}>,</span>
                   </div>
                   <div style={{ paddingLeft: 16 }}>
                     <span style={{ color: "#34d399" }}>exp</span>
                     <span style={{ color: "#f8fafc" }}>: </span>
-                    <span style={{ color: "#fb923c" }}>2</span>
+                    <span style={{ color: "#fb923c" }}>1.5+ years</span>
                     <span style={{ color: "#f8fafc" }}>, </span>
                   </div>
                   <div style={{ paddingLeft: 16 }}>
                     <span style={{ color: "#34d399" }}>passion</span>
                     <span style={{ color: "#f8fafc" }}>: </span>
                     <span style={{ color: "#fbbf24" }}>
-                      "Building for humans"
+                      "Solving real world problems through tech"
                     </span>
                   </div>
                   <div>
@@ -163,7 +163,7 @@ export default function About() {
                 marginBottom: 20,
               }}
             >
-              I'm a Frontend Engineer at{" "}
+              I'm Associate Software Engineer at{" "}
               <strong style={{ color: "var(--text-primary)" }}>
                 Droom Technology
               </strong>{" "}

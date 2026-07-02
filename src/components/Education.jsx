@@ -29,12 +29,12 @@ const CERTS = [
 ];
 
 const ACHIEVEMENTS = [
-  { icon: "🏆", title: "35% Dev Efficiency Gain", desc: "Reusable component libraries reducing dev effort across multiple Droom products" },
-  { icon: "⚡", title: "30% Faster Page Loads", desc: "Performance optimization through code splitting, lazy loading, and memoization" },
-  { icon: "💰", title: "25% Higher Conversions", desc: "Quick Checkout revamp reducing checkout friction and boosting payment completions" },
-  { icon: "👥", title: "10K+ Daily Active Users", desc: "Production features across 6+ Droom platforms serving real-world users at scale" },
-  { icon: "🎓", title: "9.28 CGPA", desc: "Outstanding academic performance at Chitkara University in CSE" },
-  { icon: "🔗", title: "20% Transaction Success ↑", desc: "Cross-functional collaboration on payment and booking integrations" },
+  { icon: "🏆", title: "200+ LeetCode Solve", desc: "Solved 200+ DSA problems across arrays, trees, graphs, dynamic programming, and SQL." },
+  { icon: "⚡", title: "30% Faster Page Loads", desc: "Optimized frontend performance using code splitting, lazy loading, memoization, and image optimization." },
+  { icon: "💰", title: "25% Higher Conversions", desc: "Redesigned the Quick Checkout flow, reducing user friction and increasing successful purchases." },
+  { icon: "👥", title: "10K+ Daily Active Users", desc: "Built and maintained production features serving 10K+ daily active users across multiple platforms." },
+  { icon: "🎓", title: "9.28 CGPA", desc: "Graduated with a 9.28 CGPA in Computer Science Engineering from Chitkara University." },
+  { icon: "🚀", title: "1.5+ Years Experience", desc: "Developed scalable full-stack applications using React, Next.js, Node.js, Rest APIs, JavaScript, and MongoDB." },
 ];
 
 export default function EducationSection() {

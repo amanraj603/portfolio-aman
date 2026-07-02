@@ -17,7 +17,9 @@ export default function Hero() {
 
   useEffect(() => {
     const words = [
-      "Frontend Engineer",
+      "Software Engineer",
+      "Full Stack Developer",
+      "MERN Stack Developer",
       "React Developer",
       "Next.js Specialist",
       "UI/UX Enthusiast",
