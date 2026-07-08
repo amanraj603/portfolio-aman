@@ -62,7 +62,7 @@ export default function EducationSection() {
           <div className="section-divider" />
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 24, marginBottom: 80 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))", gap: 24, marginBottom: 80 }}>
           {EDU.map((e, i) => (
             <div key={i} className="card reveal" style={{ transitionDelay: `${i * 0.15}s` }}>
               <div style={{ display: "flex", gap: 16, marginBottom: 20, alignItems: "flex-start" }}>
@@ -130,7 +130,7 @@ export default function EducationSection() {
           <div className="section-divider" />
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: 20 }}>
           {ACHIEVEMENTS.map((a, i) => (
             <div key={i} className="card reveal" style={{ transitionDelay: `${i * 0.08}s` }}>
               <div style={{ fontSize: 32, marginBottom: 12 }}>{a.icon}</div>
@@ -140,6 +140,12 @@ export default function EducationSection() {
           ))}
         </div>
       </div>
+      <style>{`
+        @media (max-width: 480px) {
+          #education .card { padding: 18px !important; }
+          #education .cert-row { flex-direction: column; gap: 12px; }
+        }
+      `}</style>
     </section>
   );
 }

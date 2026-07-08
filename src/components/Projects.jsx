@@ -113,7 +113,7 @@ export default function Projects() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(480px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 480px), 1fr))",
             gap: 28,
           }}
           className="projects-grid"
@@ -280,7 +280,7 @@ export default function Projects() {
         {/* GitHub CTA */}
         <div className="reveal" style={{ textAlign: "center", marginTop: 48 }}>
           <div
-            className="card"
+            className="card github-cta-card"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -318,8 +318,17 @@ export default function Projects() {
       </div>
 
       <style>{`
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
           .projects-grid { grid-template-columns: 1fr !important; }
+          .github-cta-card {
+            flex-direction: column;
+            text-align: center;
+            padding: 24px 20px !important;
+            width: 100%;
+          }
+        }
+        @media (max-width: 480px) {
+          .projects-grid > .card > div:last-child { padding: 20px !important; }
         }
       `}</style>
     </section>

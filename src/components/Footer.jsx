@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div style={{ borderTop: "1px solid var(--border)", paddingTop: 24, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
+        <div className="footer-bottom" style={{ borderTop: "1px solid var(--border)", paddingTop: 24, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
           <span style={{ fontSize: 12, color: "var(--text-muted)" }}>© {new Date().getFullYear()} Aman Raj. All rights reserved.</span>
           <span style={{ fontSize: 12, color: "var(--text-muted)" }}>Built with Next.js & ❤️</span>
         </div>
@@ -87,8 +87,13 @@ export default function Footer() {
 
       <style>{`
         @media (max-width: 768px) {
-          .footer-grid { grid-template-columns: 1fr !important; text-align: center; }
+          .footer-grid {
+            grid-template-columns: 1fr !important;
+            text-align: center;
+          }
           .footer-grid > div:last-child { justify-content: center !important; }
+          .footer-grid > div:first-child p { margin: 0 auto; }
+          .footer-bottom { flex-direction: column; text-align: center; }
         }
       `}</style>
     </footer>

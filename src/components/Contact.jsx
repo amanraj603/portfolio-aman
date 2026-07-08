@@ -248,7 +248,7 @@ You have a new message from your portfolio contact form:
 
           {/* Form */}
           <div
-            className="card reveal"
+            className="card reveal contact-form-card"
             style={{ transitionDelay: "0.15s", padding: "36px 40px" }}
           >
             <h3
@@ -411,6 +411,10 @@ You have a new message from your portfolio contact form:
         @media (max-width: 768px) {
           .contact-grid { grid-template-columns: 1fr !important; }
           .form-row { grid-template-columns: 1fr !important; }
+          .contact-form-card { padding: 24px 20px !important; }
+        }
+        @media (max-width: 480px) {
+          .contact-form-card { padding: 20px 16px !important; }
         }
       `}</style>
     </section>

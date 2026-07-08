@@ -271,8 +271,13 @@ export default function Experience() {
       </div>
 
       <style>{`
+        @media (max-width: 768px) {
+          #experience .container > div:last-child { padding-left: 36px !important; }
+          #experience .card { padding: 20px !important; }
+        }
         @media (max-width: 480px) {
           #experience .container > div:last-child { padding-left: 28px !important; }
+          #experience .card { padding: 16px !important; }
         }
       `}</style>
     </section>

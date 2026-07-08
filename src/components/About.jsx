@@ -37,7 +37,7 @@ export default function About() {
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
-            gap: 72,
+            gap: 48,
             alignItems: "center",
           }}
           className="about-grid"
@@ -242,7 +242,9 @@ export default function About() {
 
       <style>{`
         @media (max-width: 768px) {
-          .about-grid { grid-template-columns: 1fr !important; }
+          .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          .about-grid > div:first-child { order: 2; }
+          .about-grid > div:last-child { order: 1; }
         }
       `}</style>
     </section>

@@ -119,6 +119,12 @@ h1, h2, h3, h4, h5 {
   padding: 0 24px;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
 section {
   padding: 100px 0;
   position: relative;
@@ -319,8 +325,8 @@ section {
 /* ─── Back to top ───────────────────────────────────────────────────────── */
 #back-to-top {
   position: fixed;
-  bottom: 32px; right: 32px;
-  width: 48px; height: 48px;
+  bottom: 24px; right: 24px;
+  width: 44px; height: 44px;
   border-radius: 50%;
   background: linear-gradient(135deg, #8b5cf6, #3b82f6);
   border: none;
@@ -343,6 +349,15 @@ section {
 #back-to-top:hover {
   transform: scale(1.1) translateY(-2px);
   box-shadow: 0 8px 32px rgba(139,92,246,0.6);
+}
+@media (max-width: 768px) {
+  #back-to-top {
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
 }
 
 /* ─── Nav ───────────────────────────────────────────────────────────────── */
@@ -433,7 +448,16 @@ input::placeholder, textarea::placeholder { color: var(--text-muted); }
 [data-theme="light"] .mobile-menu { background: rgba(250,250,250,0.97); }
 
 @media (max-width: 768px) {
-  section { padding: 72px 0; }
-  .section-title { font-size: 2rem; }
-  .hero-section { padding-top: 100px; }
+  section { padding: 64px 0; }
+  .section-title { font-size: 1.8rem; }
+  .section-subtitle { font-size: 1rem; }
+  .hero-section { padding-top: 88px; }
+}
+
+@media (max-width: 480px) {
+  section { padding: 56px 0; }
+  .section-title { font-size: 1.6rem; }
+  .hero-section { padding-top: 80px; }
+  .card { padding: 20px; }
+  .btn { padding: 10px 20px; font-size: 13px; }
 }

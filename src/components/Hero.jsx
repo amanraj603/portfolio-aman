@@ -188,6 +188,7 @@ export default function Hero() {
             </p>
 
             <div
+              className="hero-btns"
               style={{
                 display: "flex",
                 gap: 16,
@@ -258,11 +259,13 @@ export default function Hero() {
             <div
               style={{
                 display: "flex",
-                gap: 32,
+                gap: 24,
                 marginTop: 48,
                 paddingTop: 32,
                 borderTop: "1px solid var(--border)",
+                flexWrap: "wrap",
               }}
+              className="hero-stats"
             >
               {[
                 { value: "1.5+", label: "Years Exp." },
@@ -405,6 +408,12 @@ export default function Hero() {
           .hero-grid > div:first-child p { text-align: center; }
           .hero-grid > div:first-child > div:nth-child(7) { justify-content: center; }
           .hero-grid > div:first-child > div:last-child { justify-content: center; }
+          .hero-stats { justify-content: center; gap: 20px !important; margin-top: 32px !important; padding-top: 24px !important; }
+        }
+        @media (max-width: 480px) {
+          .hero-stats { gap: 16px !important; }
+          .hero-grid > div:first-child > div.hero-btns { flex-direction: column; align-items: center; width: 100%; }
+          .hero-grid > div:first-child > div.hero-btns a { width: 100%; justify-content: center; }
         }
       `}</style>
     </section>
