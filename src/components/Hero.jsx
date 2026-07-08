@@ -333,7 +333,7 @@ export default function Hero() {
             >
               <Image
                 src="/profile.png"
-                alt="Aman Raj – Frontend Engineer"
+                alt="Aman Raj – Full Stack Engineer"
                 fill
                 style={{ objectFit: "cover" }}
                 priority
